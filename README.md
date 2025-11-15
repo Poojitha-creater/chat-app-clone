@@ -1,78 +1,85 @@
-# Chat App Clone - Full Stack Assignment
+# Chat Application
 
-This repository contains a full-stack chat application clone built using React (with Tailwind CSS) for the frontend and Node.js with Express for the backend (using mock APIs).
+A full-stack chat application with real-time messaging, theme support, and data visualization.
 
-## 🚀 Deliverables
+## Features
 
-* **Frontend**: React + JavaScript + Tailwind CSS.
-* **Backend**: Node.js Express with mock JSON APIs.
-* **Code Sharing**: Deployed via GitHub.
+- Real-time chat messaging
+- Multiple chat sessions
+- Light/Dark mode
+- Data tables in responses
+- Responsive design
 
+## Tech Stack
 
-## 🛠️ Prerequisites
+**Frontend:** React 19, Vite, Tailwind CSS, React Router  
+**Backend:** Express.js, Node.js
 
-* Node.js (v20.x or higher is recommended)
-* npm (Node Package Manager)
+## Quick Start
 
-## ⚙️ Local Setup and Run Instructions
+### Prerequisites
+- Node.js (v16+)
+- npm
 
-You will need two separate terminal windows/tabs to run the Backend and Frontend concurrently.
+### Setup
 
-### 1. Backend Setup and Run
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm install
+npm start
+```
+Backend: http://localhost:3001
 
-The backend serves the API endpoints on port 3001.
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Frontend: http://localhost:5173
 
-1.  Navigate to the backend directory:
-    ```bash
-    cd backend
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Start the server:
-    ```bash
-    node server.js
-    # You should see: Backend server running at http://localhost:3001
-    ```
+## Project Structure
 
-### 2. Frontend Setup and Run
+```
+├── backend/              # Express API server
+│   ├── server.js        # Main server file
+│   ├── mockData/        # Mock data
+│   └── package.json
+├── frontend/            # React app
+│   ├── src/
+│   │   ├── components/  # React components
+│   │   ├── context/     # Theme context
+│   │   └── App.jsx
+│   └── package.json
+└── README.md
+```
 
-The frontend is a Vite/React application served on port 5173.
+## API Endpoints
 
-1.  **Open a NEW terminal window/tab.**
-2.  Navigate to the frontend directory:
-    ```bash
-    cd frontend
-    ```
-3.  Install dependencies:
-    ```bash
-    npm install
-    ```
-4.  Start the development server:
-    ```bash
-    npm run dev
-    # You should see: Local: http://localhost:5173/
-    ```
+- `POST /api/v1/sessions/new` - Create session
+- `GET /api/v1/sessions` - List sessions
+- `GET /api/v1/sessions/:sessionId/history` - Get chat history
+- `POST /api/v1/sessions/:sessionId/question` - Send message
 
-### 3. View the Application
+## Development
 
-The application should automatically open or be viewable at: **`http://localhost:5173/`**
+### Frontend Scripts
+```bash
+npm run dev       # Start dev server
+npm run build     # Production build
+npm run lint      # Lint code
+```
 
----
+### Environment Setup
 
-## 📄 Secondary README for Frontend (`/frontend/README.md`)
+Create `.env` in backend:
+```
+PORT=3001
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+```
 
-Create a file named `README.md` inside your `/frontend` directory:
+## License
 
-```markdown
-# Frontend (React + Tailwind CSS)
-
-This directory contains the user interface and logic for the chat application.
-
-## Local Development
-
-Ensure the backend server is running first (see main repository README for instructions).
-
-1. Install dependencies: `npm install`
-2. Start the development server: `npm run dev`
+MIT
