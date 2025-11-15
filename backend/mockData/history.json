@@ -1,0 +1,67 @@
+{
+  "sess_12345": [
+    {
+      "id": 1,
+      "type": "user",
+      "text": "What are the best performance tips for large React applications?"
+    },
+    {
+      "id": 2,
+      "type": "ai",
+      "text": "Optimizing a large React app primarily involves minimizing unnecessary re-renders and improving initial load time. Here is a summary of key techniques:",
+      "data": {
+        "type": "table",
+        "headers": ["Technique", "Description", "Impact"],
+        "rows": [
+          ["`React.memo`", "Higher-Order Component to memoize functional components.", "High"],
+          ["`useCallback`", "Memoize functions to avoid re-creation on every render.", "Medium"],
+          ["`useMemo`", "Memoize complex calculations or objects.", "Medium"],
+          ["Virtualization", "Rendering only visible list items in long lists.", "Very High"]
+        ]
+      }
+    }
+  ],
+  "sess_67890": [
+    {
+      "id": 1,
+      "type": "user",
+      "text": "How to structure a robust Node.js Express API?"
+    },
+    {
+      "id": 2,
+      "type": "ai",
+      "text": "A robust Express API often uses a 'Controller-Service-Route' pattern for separation of concerns. This makes the codebase modular and scalable.",
+      "data": {
+        "type": "table",
+        "headers": ["Layer", "Role", "Example File"],
+        "rows": [
+          ["Routes", "Defines endpoints and calls Controller functions.", "`/routes/user.js`"],
+          ["Controllers", "Handles request/response and calls Service methods.", "`/controllers/userController.js`"],
+          ["Services", "Contains business logic and data manipulation.", "`/services/userService.js`"]
+        ]
+      }
+    }
+  ],
+  "sess_11223": [
+    {
+      "id": 1,
+      "type": "user",
+      "text": "Can you list the core TailwindCSS typography utilities?"
+    },
+    {
+      "id": 2,
+      "type": "ai",
+      "text": "TailwindCSS offers a comprehensive set of utility classes for controlling font styling, weight, and size. Here are the core groups:",
+      "data": {
+        "type": "table",
+        "headers": ["Category", "Example Class", "Function"],
+        "rows": [
+          ["Font Size", "`text-xl`", "Sets font size."],
+          ["Font Weight", "`font-bold`", "Sets font weight."],
+          ["Text Alignment", "`text-center`", "Aligns text."],
+          ["Line Height", "`leading-loose`", "Sets line height."]
+        ]
+      }
+    }
+  ]
+}
