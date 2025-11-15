@@ -1,23 +1,30 @@
 {
-  "name": "backend",
+  "name": "chat-app-backend",
   "version": "1.0.0",
-  "description": "Backend for ChatGPT Clone Assignment",
+  "description": "Backend API for Chat Application - Express.js REST API",
   "main": "server.js",
-  "type": "module",  
+  "type": "module",
   "scripts": {
     "start": "node server.js",
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "node",
+    "nodejs",
     "express",
-    "mock"
+    "rest-api",
+    "chat",
+    "backend"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Development Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "uuid": "^9.0.1"
-  }
+  },
+  "devDependencies": {}
 }
